@@ -1,0 +1,1032 @@
+body {
+  margin: 0px;
+}
+
+.desktop {
+  background-color: white;
+  margin: 50px;
+  margin-bottom: 0;
+  padding-bottom: 100px;
+  min-height: 1000px;
+}
+
+.shapka {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 116px;
+  background-color: black;
+}
+
+#burger {
+  z-index: 11;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  left: 21px;
+  top: 24px;
+  background: #FFFFFF;
+}
+
+/* скрываем чекбокс */
+#menu__toggle {
+  opacity: 0;
+}
+
+/* стилизуем кнопку */
+.menu__btn {
+  display: flex;
+  /* используем flex для центрирования содержимого */
+  align-items: center;
+  /* центрируем содержимое кнопки */
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+/* добавляем "гамбургер" */
+.menu__btn>span,
+.menu__btn>span::before,
+.menu__btn>span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: black;
+}
+
+.menu__btn>span::before {
+  content: '';
+  top: -8px;
+}
+
+.menu__btn>span::after {
+  content: '';
+  top: 8px;
+}
+
+/* контейнер меню */
+.menu__box {
+  display: block;
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  left: -100%;
+  width: 300px;
+  height: 100%;
+  margin: 0;
+  padding: 80px 0;
+  list-style: none;
+  text-align: left;
+  background-color: #ffffff;
+  box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+}
+
+/* элементы меню */
+.menu__item {
+  display: block;
+  padding: 12px 24px;
+  color: rgb(0, 0, 0);
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.menu__item:hover {
+  background-color: #CFD8DC;
+}
+
+#menu__toggle:checked~.menu__btn>span {
+  transform: rotate(45deg);
+}
+
+#menu__toggle:checked~.menu__btn>span::before {
+  top: 0;
+  transform: rotate(0);
+}
+
+#menu__toggle:checked~.menu__btn>span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+#menu__toggle:checked~.menu__box {
+  visibility: visible;
+  left: 0;
+}
+
+.menu__btn>span,
+.menu__btn>span::before,
+.menu__btn>span::after {
+  transition-duration: .25s;
+}
+
+.menu__box {
+  transition-duration: .25s;
+}
+
+.menu__item {
+  transition-duration: .25s;
+}
+
+#logo {
+  display: flex;
+  width: 300px;
+}
+
+#logo img {
+  height: 50px;
+  margin-top: 24px;
+  margin-left: 100px;
+}
+
+.sub-menu {
+  display: none;
+  list-style: none;
+}
+.has-sub-menu:hover .sub-menu {
+  display: block;
+}
+
+.regcart {
+  display: flex;
+}
+
+.autoreg {
+  display: block;
+  margin-top: 30px;
+  margin-right: 100px;
+}
+
+.regist {
+  margin-top: 11px;
+}
+
+.autori a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #fdfdfd;
+  line-height: 1.5;
+  outline: none;
+}
+
+.regist a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #ffffff;
+  line-height: 1.5;
+  outline: none;
+}
+
+
+.regist a:hover {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.autori a:hover {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.cart {
+  width: 150px;
+  height: 50px;
+  background: #ffffff;
+  border-radius: 30px;
+  color: rgb(0, 0, 0);
+  font-style: normal;
+  font-size: 16px;
+  border: none;
+  margin-top: 35px;
+  margin-right: 50px;
+}
+.cart a {
+  text-decoration: none;
+  color:#000
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+  flex-flow: column wrap;
+  text-align: center;
+  font-family: serif;
+  flex-wrap: wrap;
+  font-size: 2.5rem;
+}
+
+#reclama {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  margin: 5px;
+  margin-left: 38%;
+  font-size: 20px;
+  color: white;
+  background: #000000;
+  width: 500px;
+  height: 200px;
+}
+#reclama img{
+  width: 500px;
+  height: 200px;
+}
+
+#footer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 150px;
+  background-color: black;
+}
+
+.info {
+  list-style: none;
+  margin-right: 20px;
+  width: 150px;
+  text-decoration: none;
+  flex-flow: column wrap;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+
+}
+
+.info a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav {
+  list-style: none;
+  width: 150px;
+  text-decoration: none;
+  justify-content: center;
+  flex-flow: column wrap;
+  text-align: center;
+  color: #FFFFFF;
+  display: flex;
+
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.obr {
+  list-style: none;
+  width: 200px;
+  text-decoration: none;
+  justify-content: center;
+  flex-flow: column wrap;
+ 
+  color: #FFFFFF;
+  display: flex;
+}
+
+.obr a {
+  color: white;
+  text-decoration: none;
+}
+
+
+/* ----ОТЗОВЫ--- */
+#osn {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#o1 {
+  display: flex;
+  justify-content: center;
+  width: 824px;
+  height: 350px;
+
+}
+
+.titles {
+  width: 140px;
+  float: left;
+}
+
+#form_message {
+  border-radius: 8px;
+  width: 320px;
+  height: 330px;
+}
+#mes1{
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: -400px;
+  margin-bottom: 10px;
+}
+.messagefeedback{
+  min-height: 290px;
+  width: 800px;
+  word-break:break-all;
+  margin-left: 10px;
+  font-size: 15px;
+
+}
+.namefeedback{
+  color: #000000;
+  font-size: 25px;
+  margin-left: 30px;
+  margin-bottom: 10px;
+}
+.comment{
+  color: #000000
+}
+#submit {
+  background-color: #000000;
+  color: #ffffff;
+  width: 200px;
+  height: 50px;
+  margin-left: 50px;
+  border-radius: 10px;
+}
+
+#form_message h2 {
+  text-align: center;
+  border-radius: 10px;
+}
+
+.input3 {
+  width: 300px;
+  height: 20px;
+  border-radius: 10px;
+}
+
+.texta1 {
+  width: 300px;
+  height: 50px;
+  border-radius: 10px;
+}
+
+/* ----регистрация надо починить--- */
+#osnova1
+{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 600px;
+  height: 800px;
+  background: #D9D9D9;
+}
+.pole1 {
+    width: 550px;
+    height: 10px;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    background: #f1f1f1;
+  }
+  
+  input[type=text]:focus, input[type=password]:focus {
+    background-color: rgb(255, 255, 255);
+    outline: none;
+  }
+  
+  /* Set a style for the submit/register button */
+  .registerbtn {
+
+    background-color: #000000;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 200px;
+    height: 50px;
+    opacity: 0.9;
+  }
+  
+  .registerbtn:hover {
+    opacity:1;
+  }
+#messageShow{
+  clear:both;
+  display: block;
+}
+  /* -----авторизация---- */
+#s1{
+  display: block;
+  width: 270px;
+  height: 140px;
+  margin-left: 10px;
+  margin-top: -50px;
+
+}
+  .problem{
+    display: block;
+    height: 50px;
+    width: 250px;
+    margin-left: 15px;
+    z-index: 2;
+  }
+  .problem a{
+    text-align: center;
+    font-size: 15px;
+    color: #000000;
+    text-decoration: none;
+    line-height: 1.5;}
+
+    .registerbtn1 {
+      background-color: #000000;
+      display: block;
+      color: white;
+      padding: 16px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+margin-left: 30px;
+      width: 200px;
+      height: 50px;
+      opacity: 0.9;
+    }
+    
+    .registerbtn1:hover {
+      opacity:1;
+    }
+    
+
+/* ----каталог---- */
+#osn {
+  width: 100%;
+  min-height: 800px;
+  display: flex;
+  justify-content: space-between;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.card {
+  width: 300px;
+  height: 500px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: 100px;
+  text-align: center;
+  font-family: arial;
+  font-size: 10px;
+}
+.card img{
+  width: 300px;
+  height: 225px;
+}
+.opisanie{
+  color: rgb(0, 0, 0);
+  font-size: 15px;
+}
+
+.price {
+  color: rgb(0, 0, 0);
+  font-size: 22px;
+}
+.price_skidki {
+  color: rgb(0, 0, 0);
+  font-size: 22px;
+}
+.old_skidki {
+  color: rgb(243, 3, 3);
+  font-size: 17px;
+  text-decoration: line-through;
+}
+
+
+.card button {
+  border: none;
+  border-radius: 8px;
+  outline: 0;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  height:50px;
+  font-size: 14px;
+}
+.card button a{
+  text-decoration: none;
+  color: white;
+}
+
+
+.card button:hover {
+  opacity: 0.7;
+}
+/* ----корзина--- */
+.nadpis_corz{
+  width: 821px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 70px;
+}
+
+.corz{
+  width: 145px;
+  height: 44px;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 44px;
+}
+
+.cleancorz{
+  width: 142px;
+  height: 54px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #000000;
+}
+
+.item{
+  display: flex;
+  width: 821px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.minipizza{
+  width: 80px;
+  height: 80px;
+}
+
+.name_pizza_razmer{
+  display: block;
+  padding-top: 10px;
+  padding-left: 15px;
+}
+
+.namepizza{
+  width: 280px;
+  height: 30px;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 30px;
+  text-align: left;
+}
+
+.parampizza{
+  width: 280px;
+  height: 25px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+  color: #000000;
+  text-align: left;
+}
+
+.minus1{
+  background: white;
+  border: 2px solid #000000;
+  border-radius: 50%;
+  color: #000000;
+  text-align: center;
+  padding: 7px;
+  padding-top: 3px;
+  padding-bottom: 11px;
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+}
+
+.plus1{
+  background: white;
+  border: 2px solid #000000;
+  border-radius: 50%;
+  color: #000000;
+  text-align: center;
+  padding: 7px;
+  padding-top: 6px;
+  padding-bottom: 8px;
+  width: 16px;
+  height: 16px;
+}
+
+.chislo1{
+  width: 13px;
+  height: 30px;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 30px;
+  margin-right: 10px;
+}
+
+.chislo2{
+  width: 71px;
+  height: 30px;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 30px;
+  display: flex;
+  justify-content: right;
+}
+
+.crest{
+  background: rgb(0, 0, 0);
+  color: #ffffff;
+  text-align: center;
+  border-radius: 30px;
+  font-weight: 700;
+  width: 100px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.kol-vo{
+  padding-top: 20px;
+  width: 450px;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.kol-vo_chislo{
+  display: flex; 
+}
+
+.vsego{
+  width: 194px;
+  height: 30px;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 30px;
+}
+
+.summa{
+  width: 300px;
+  height: 30px;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 30px;
+  margin-left: 100px;
+}
+
+.nazad1{
+  box-sizing: border-box;
+  width: 211px;
+  height: 55px;
+  background: #000000;
+  border: 1px solid #000000;
+  border-radius: 30px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  padding-top: 15px;
+  color: #ffffff;
+}
+.nazad1{
+  cursor: pointer;
+}
+.nazad1 a{
+  text-decoration: none;
+  color: white;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  padding-top: 15px;
+}
+
+
+.oplata{
+  width: 211px;
+  height: 40px;
+  background: #000000;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  padding-top: 15px;
+  color: #FFFFFF;
+}
+
+.nazad2{
+  width: 210px;
+  height: 46px;
+  background: #000000;
+  border-radius: 30px;
+}
+
+.buttpadd3{
+  padding-top: 12px;
+  padding-left: 45px;
+  display: flex;
+  color: rgb(0, 0, 0);
+}
+/* ----Контаккты--- */
+#osnova2
+{
+  display: block;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 900px;
+  height: 800px;
+
+}
+h3{
+  text-align: justify;
+}
+.obr2 {
+  list-style: none;
+  text-decoration: none;
+  justify-content: center;
+  flex-flow: column wrap;
+  text-align: center;
+  color: #000000;
+  display: flex;
+}
+
+.obr2 a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+#karta{
+
+  margin-top: 50px;
+  width: 100%;
+  height: 100px;
+}
+#karta img{
+  width: 100%;
+  height: 450px;
+}
+.carousel {
+  position: relative;
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+  margin-top: 26px;
+}
+
+.carousel-inner {
+  position: relative;
+  overflow: hidden;
+  width: 70%;
+  margin-left: 15%;
+  height: 500px;
+}
+
+.carousel-open:checked + .carousel-item {
+  position: static;
+  opacity: 100;
+}
+
+.carousel-item {
+  position: absolute;
+  opacity: 0;
+  -webkit-transition: opacity 0.6s ease-out;
+  transition: opacity 0.6s ease-out;
+}
+
+.carousel-item img {
+  display: block;
+  width: 100%;
+  height: 500px;
+}
+
+
+.carousel-control {
+  background: rgba(0, 0, 0, 0.28);
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+  font-size: 40px;
+  height: 40px;
+  line-height: 35px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  cursor: pointer;
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  text-align: center;
+  width: 40px;
+  z-index: 10;
+}
+
+.carousel-control.prev {
+  left: 2%;
+}
+
+.carousel-control.next {
+  right: 2%;
+}
+
+.carousel-control:hover {
+  background: rgba(0, 0, 0, 0.8);
+  color: #aaaaaa;
+}
+
+#carousel-1:checked ~ .control-1,
+#carousel-2:checked ~ .control-2,
+#carousel-3:checked ~ .control-3 {
+  display: block;
+}
+
+.carousel-indicators {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 2%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 10;
+}
+
+.carousel-indicators li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.carousel-bullet {
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  font-size: 35px;
+}
+
+.carousel-bullet:hover {
+  color: #aaaaaa;
+}
+
+#carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
+#carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
+#carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
+  color: #428bca;
+}
+
+#title {
+  width: 100%;
+  position: absolute;
+  padding: 0px;
+  margin: 0px auto;
+  text-align: center;
+  font-size: 27px;
+  color: rgba(255, 255, 255, 1);
+  font-family: 'Open Sans', sans-serif;
+  z-index: 9999;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), -1px 0px 2px rgba(255, 255, 255, 0);
+}
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.product-page__image {
+  text-align: center;
+}
+
+.product-page__image img {
+  max-width: 100%;
+}
+
+.product-page__description p {
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+table {
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+th,
+td {
+  padding: 0.5rem;
+}
+
+th {
+  text-align: left;
+  font-weight: bold;
+}
+
+/* Стили отзывов и контактной информации */
+
+.product-page__reviews p,
+.product-page__seller-info p {
+  margin-bottom: 1rem;
+}
+
+/* Стили для списков */
+
+.related-products ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.related-products li {
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  flex-basis: calc(50% - 0.5rem);
+}
+
+.related-products a {
+  display: block;
+  background-color: #f2f2f2;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  color: #333;
+}
+
+/* Стили кнопки "Купить" */
+
+.product-page__buy-button {
+  display: block;
+  margin: 0 auto;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  width: 100%;
+  max-width: 400px;
+}
+
+@media screen and (min-width: 600px) {
+ 
+
+  .product-page__description {
+    width: 60%;
+    float: left;
+    margin-right: 2rem;
+  }
+
+  .product-page__image {
+    width: 40%;
+    float: left;
+  }
+
+  .product-page__seller-info {
+    width: 40%;
+    float: left;
+    clear: left;
+    margin-top: 1rem;
+  }
+}
+.cart-count {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  font-size: 14px;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  background-color: red;
+  border-radius: 50%;
+  padding: 5px;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+}
+
+.addproduct{
+    border: none;
+    border-radius: 8px;
+    outline: 0;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    height:50px;
+    font-size: 14px;
+  }
+  .addproduct button a{
+    text-decoration: none;
+    color: white;
+  }
+  
+  
+  .addproduct button:hover {
+    opacity: 0.7;
+  }
